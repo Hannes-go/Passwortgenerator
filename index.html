@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="style.css">
+
+    <meta charset="UTF-8">
+    <title>Passwortgenerator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>🔐 Passwortgenerator</h1>
+
+        <label for="length">Passwortlänge:</label>
+        <input type="number" id="length" min="4" max="15" value="10">
+
+        <div class="options">
+            <label><input type="checkbox" id="uppercase" checked> Großbuchstaben</label>
+            <label><input type="checkbox" id="lowercase" checked> Kleinbuchstaben</label>
+            <label><input type="checkbox" id="numbers" checked> Zahlen</label>
+            <label><input type="checkbox" id="symbols"> Sonderzeichen</label>
+        </div>
+
+        <button onclick="generatePassword()">🔑 Passwort generieren</button>
+
+        <input type="text" id="passwordOutput" readonly>
+
+        <button onclick="copyToClipboard()">📋 In Zwischenablage kopieren</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
